@@ -12,19 +12,14 @@ function findMatching(drivers, name){
 
 }
 
+const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'obbby'];
 function fuzzyMatch(drivers, name){
  
-    return  drivers.filter(driver =>{
-       
-
-        if (driver.toLowerCase().split("") == name.toLowerCase().split("")){
-            return driver
-        }
-        
     
-     
-        
-    });
+        return drivers.filter(function(el) {
+          return el.toLowerCase().indexOf(name.toLowerCase()) === 0
+        })
+       
 
 }
 
